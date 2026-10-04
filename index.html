@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d31">
+  <meta name="description" content="Uma apresentação interativa da análise FOFA da comunidade Faxinal Papanduva de Baixo.">
+  <title>Análise FOFA — realizada no IFPR</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="barra-superior" aria-label="Navegação da apresentação">
+    <a class="marca" href="#abertura" aria-label="Voltar à abertura">
+      <svg aria-hidden="true" viewBox="0 0 40 40">
+        <path d="M20 34C10 29 7 20 9 8c9 1 15 6 17 14M20 34c0-9 4-17 12-22 3 11-1 19-12 22Z"/>
+        <path d="M20 34c-1-9-4-15-9-20m9 20c2-7 5-12 10-16"/>
+      </svg>
+      <span>FOFA <small>REALIZADA NO IFPR</small></span>
+    </a>
+
+    <!-- <nav class="navegacao-secoes" aria-label="Seções">
+      <a href="#abertura" data-secao="abertura"><span>01</span><b>Abertura</b></a>
+      <a href="#matriz" data-secao="matriz"><span>02</span><b>Matriz</b></a>
+      <a href="#encerramento" data-secao="encerramento"><span>03</span><b>Encerramento</b></a>
+    </nav> !-->
+
+    <div class="trilha-progresso" aria-hidden="true"><span></span></div>
+  </header>
+
+  <main id="conteudo">
+    <section class="abertura secao-observada" id="abertura" aria-labelledby="titulo-principal">
+      <div class="textura-abertura" aria-hidden="true"></div>
+      <div class="conteudo-abertura revelar">
+        <p class="chamada-abertura"><span></span> Comunidade • natureza • futuro</p>
+        <h1 id="titulo-principal">
+          <span>Análise FOFA</span>
+          <strong>Realizada em<br>Conjunto</strong>
+        </h1>
+        <p class="introducao-abertura">Um olhar sobre as comunidades, seus desafios e seus caminhos para o futuro.</p>
+        <a class="botao-principal" href="#matriz">
+          Explorar a análise
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg>
+        </a>
+      </div>
+
+      <div class="cenario-abertura" aria-hidden="true">
+        <svg viewBox="0 0 900 760" role="img">
+          <defs>
+            <linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#bcd7dc"/>
+              <stop offset="1" stop-color="#edf0df"/>
+            </linearGradient>
+            <pattern id="linhas-campo" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(25)">
+              <path d="M0 3h28" stroke="#f7efd2" stroke-opacity=".25" stroke-width="2"/>
+            </pattern>
+          </defs>
+          <path d="M100 38C249-13 532 2 703 102c153 90 188 302 126 441C762 694 526 765 302 713 76 661-47 489 17 290 48 194 45 57 100 38Z" fill="url(#ceu)"/>
+          <g class="nuvem nuvem-um" fill="#fff9e9" opacity=".88">
+            <path d="M135 175c7-24 27-38 48-28 14-28 59-20 62 13 28-5 45 12 48 31H126c-12-1-9-14 9-16Z"/>
+          </g>
+          <g class="nuvem nuvem-dois" fill="#fff9e9" opacity=".72">
+            <path d="M548 119c5-19 23-30 40-22 10-23 46-17 50 9 22-4 36 9 38 25H541c-10-1-7-11 7-12Z"/>
+          </g>
+          <circle cx="718" cy="214" r="54" fill="#e9af54" opacity=".95"/>
+          <path d="M3 473C159 368 279 429 416 365c163-77 329-9 478 72v319H8Z" fill="#729970"/>
+          <path d="M0 536c181-99 338-58 454-7 134 59 267-14 446-35v266H0Z" fill="#426f58"/>
+          <path d="M0 615c157-56 319-26 463 38 157 70 284 3 437-43v150H0Z" fill="#254d3e"/>
+          <path d="M0 536c181-99 338-58 454-7 134 59 267-14 446-35v266H0Z" fill="url(#linhas-campo)"/>
+          <path d="M441 760c-49-83-33-143 62-190 52-26 66-48 58-87 43 50 36 90-36 127-80 41-82 91-38 150Z" fill="#d9bd85"/>
+          <g transform="translate(555 365)">
+            <path d="M0 58 69 3l74 55v96H0Z" fill="#f3e6c6"/>
+            <path d="m-12 62 81-65 87 65-12 16L69 20 0 78Z" fill="#8d503b"/>
+            <path d="M55 93h35v61H55Z" fill="#7d4938"/>
+            <path d="M13 84h27v28H13zm91 0h27v28h-27Z" fill="#78aab1"/>
+            <path d="M106 23V-8h18v45" fill="#87503b"/>
+          </g>
+          <g class="arvores" stroke="#173d31" stroke-linecap="round">
+            <path d="M183 524v-91m0 28-26-28m26 10 29-34" stroke-width="7"/>
+            <g fill="#315f49" stroke="none">
+              <ellipse cx="153" cy="418" rx="39" ry="51"/>
+              <ellipse cx="198" cy="393" rx="44" ry="62"/>
+              <ellipse cx="225" cy="435" rx="32" ry="47"/>
+            </g>
+          </g>
+          <g stroke="#d8bd85" stroke-width="8" stroke-linecap="round">
+            <path d="M629 612v93m89-115v92m86-112v93M615 642l205-42m-205 75 205-43"/>
+          </g>
+          <g class="folhas-frente" fill="none" stroke="#b6c97d" stroke-width="7" stroke-linecap="round">
+            <path d="M91 742c7-78 31-132 73-169m-45 106c-31-17-45-40-42-67m62 29c27-13 43-35 47-62"/>
+            <path d="M782 749c-6-75-26-124-61-158m41 98c31-15 45-37 42-64m-63 27c-25-12-39-30-43-55"/>
+          </g>
+        </svg>
+ 
+      </div>
+
+    </section>
+
+    <section class="secao-matriz secao-observada" id="matriz" aria-labelledby="matriz-titulo">
+      <div class="conteiner-secao conteiner-amplo">
+        <header class="cabecalho-matriz revelar">
+          <div>
+            <h2 id="matriz-titulo">O território visto<br><em>por quatro ângulos.</em></h2>
+          </div>
+
+        </header>
+
+        <div class="legenda-matriz revelar" aria-label="Legenda da matriz">
+          <span><i class="legenda-interno"></i> Ambiente interno</span>
+          <span><i class="legenda-externo"></i> Ambiente externo</span>
+          <span><i class="legenda-favoravel"></i> Aspecto favorável</span>
+          <span><i class="legenda-desafiador"></i> Aspecto desafiador</span>
+        </div>
+
+        <div class="grade-fofa">
+          <article class="quadrante quadrante-forcas revelar" data-grupo="forcas" aria-labelledby="forca-titulo">
+            <header class="cabecalho-quadrante">
+              <div class="icone-quadrante">
+                <svg aria-hidden="true" viewBox="0 0 48 48"><path d="M24 42V23m0 6C13 27 9 20 10 9c11 0 18 7 14 20Zm0 5c10-2 16-8 16-18-10 0-16 6-16 18Z"/></svg>
+              </div>
+              <div><p>Interno • favorável</p><h3 id="forca-titulo">Forças</h3></div>
+              <span class="contador-pontos"><strong>6</strong> pontos</span>
+            </header>
+            <p class="descricao-quadrante">O que a comunidade já preserva, valoriza e realiza.</p>
+            <div class="lista-pontos">
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="forca-1">
+                  <span class="numero-ponto">01</span><span class="titulo-ponto">Cozinhas comunitárias</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="forca-1" hidden><p>Espaços de uso coletivo que apoiam o preparo e o processamento de alimentos, reduzem custos e fortalecem a cooperação entre as famílias.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="forca-2">
+                  <span class="numero-ponto">02</span><span class="titulo-ponto">Emissão de nota fiscal</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="forca-2" hidden><p>A possibilidade de emitir nota fiscal favorece a comercialização formal, a participação em programas públicos e o acesso a novos compradores.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="forca-3">
+                  <span class="numero-ponto">03</span><span class="titulo-ponto">Atuação da associação comunitária</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="forca-3" hidden><p>A associação mobiliza moradores, organiza serviços e representa interesses coletivos, criando uma base importante para novos projetos.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="forca-4">
+                  <span class="numero-ponto">04</span><span class="titulo-ponto">Agricultura familiar presente</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="forca-4" hidden><p>Os pequenos agricultores mantêm conhecimentos, modos de vida e produção local, contribuindo para a renda e a segurança alimentar do território.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="forca-5">
+                  <span class="numero-ponto">05</span><span class="titulo-ponto">Diversidade da produção agrícola</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="forca-5" hidden><p>A produção de soja, feijão, milho e outros alimentos amplia as possibilidades de consumo, comercialização e geração de renda.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="forca-6">
+                  <span class="numero-ponto">06</span><span class="titulo-ponto">Agroindústrias e comércio local</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="forca-6" hidden><p>Agroindústrias, panificadoras e mercados ajudam a beneficiar produtos, movimentar a economia e manter parte da renda na própria região.</p></div>
+              </div>
+            </div>
+          </article>
+
+
+
+
+
+
+
+          <article class="quadrante quadrante-fraquezas revelar" data-grupo="fraquezas" aria-labelledby="fraqueza-titulo">
+            <header class="cabecalho-quadrante">
+              <div class="icone-quadrante">
+                <svg aria-hidden="true" viewBox="0 0 48 48"><path d="M6 40V18m12 22V14m12 26V18m12 22V14M3 24l42-8M3 35l42-8"/></svg>
+              </div>
+              <div><p>Interno • desafiador</p><h3 id="fraqueza-titulo">Fraquezas</h3></div>
+              <span class="contador-pontos"><strong>8</strong> pontos</span>
+            </header>
+            <p class="descricao-quadrante">O que depende de organização, cuidado e melhoria interna.</p>
+            <div class="lista-pontos">
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="fraqueza-1">
+                  <span class="numero-ponto">01</span><span class="titulo-ponto">Acesso limitado a mercados</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="fraqueza-1" hidden><p>Sem canais regulares de venda, parte da produção perde valor ou é descartada, diminuindo a renda das famílias agricultoras.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="fraqueza-2">
+                  <span class="numero-ponto">02</span><span class="titulo-ponto">Assistência técnica insuficiente</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="fraqueza-2" hidden><p>A cobertura limitada de ATER — Assistência Técnica e Extensão Rural — dificulta o planejamento, a regularização e a melhoria da produção.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="fraqueza-3">
+                  <span class="numero-ponto">03</span><span class="titulo-ponto">Dificuldades de transporte</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="fraqueza-3" hidden><p>Muitos moradores não dispõem de transporte para chegar à cidade, acessar serviços ou levar seus produtos a pontos de comercialização.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="fraqueza-4">
+                  <span class="numero-ponto">04</span><span class="titulo-ponto">Infraestrutura comunitária insuficiente</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="fraqueza-4" hidden><p>A falta de espaços e estruturas adequadas no interior limita reuniões, capacitações, produção e outras atividades coletivas.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="fraqueza-5">
+                  <span class="numero-ponto">05</span><span class="titulo-ponto">Adequação sanitária das cozinhas</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="fraqueza-5" hidden><p>As unidades de processamento precisam atender às exigências sanitárias e legais para ampliar a produção e comercializar com segurança.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="fraqueza-6">
+                  <span class="numero-ponto">06</span><span class="titulo-ponto">Acesso irregular à água tratada</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="fraqueza-6" hidden><p>A falta ou a irregularidade do abastecimento de água tratada afeta o consumo, a higiene, a produção e a qualidade de vida.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="fraqueza-7">
+                  <span class="numero-ponto">07</span><span class="titulo-ponto">Produtos sem rotulagem adequada</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="fraqueza-7" hidden><p>A ausência de rótulos com informações obrigatórias reduz a confiança do consumidor e impede o acesso a mercados formais.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="fraqueza-8">
+                  <span class="numero-ponto">08</span><span class="titulo-ponto">Maquinário insuficiente</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="fraqueza-8" hidden><p>A falta de máquinas e equipamentos apropriados reduz a produtividade e aumenta o esforço e o custo do trabalho.</p></div>
+              </div>
+
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="fraqueza-9">
+                  <span class="numero-ponto">09</span><span class="titulo-ponto">Falta de jovens</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="fraqueza-9" hidden><p>Muitos jovens optam por morar na cidade invés do interior </p></div>
+              </div>
+
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="fraqueza-10">
+                  <span class="numero-ponto">10</span><span class="titulo-ponto">Dependências de programas institucionais médicos</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="fraqueza-10" hidden><p>Poucos Médicos presentes nas comunidades rurais </p></div>
+              </div>
+
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="fraqueza-11">
+                  <span class="numero-ponto">11</span><span class="titulo-ponto">Venda de Ultraprocessados</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="fraqueza-11" hidden><p>A permissão da venda de alimentos ultraprocessados principalmente em instituições de ensino</p></div>
+              </div>
+
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="fraqueza-12">
+                  <span class="numero-ponto">12</span><span class="titulo-ponto">Escolas com falta de materiais e estruturas</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="fraqueza-12" hidden><p>Muitas escolas das comunidades rurais carecem de materiais didáticos e infraestrutura adequada para determinadas atividades</p></div>
+              </div>
+            </div>
+          </article>
+
+
+
+
+
+
+
+
+
+
+          <article class="quadrante quadrante-oportunidades revelar" data-grupo="oportunidades" aria-labelledby="oportunidade-titulo">
+            <header class="cabecalho-quadrante">
+              <div class="icone-quadrante">
+                <svg aria-hidden="true" viewBox="0 0 48 48"><path d="M24 42V6M9 19c9 0 15 5 15 14C15 33 9 28 9 19Zm30-6c-9 0-15 5-15 14 9 0 15-5 15-14Z"/><path d="M7 42h34"/></svg>
+              </div>
+              <div><p>Externo • favorável</p><h3 id="oportunidade-titulo">Oportunidades</h3></div>
+              <span class="contador-pontos"><strong>6</strong> pontos</span>
+            </header>
+            <p class="descricao-quadrante">Possibilidades que podem apoiar o desenvolvimento futuro.</p>
+            <div class="lista-pontos">
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="oportunidade-1">
+                  <span class="numero-ponto">01</span><span class="titulo-ponto">Ampliação da presença em feiras</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="oportunidade-1" hidden><p>Apoio logístico e transporte compartilhado podem aproximar agricultores das feiras urbanas, reduzir perdas e criar novos canais de venda.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="oportunidade-2">
+                  <span class="numero-ponto">02</span><span class="titulo-ponto">Investimentos em água e saneamento</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="oportunidade-2" hidden><p>Programas públicos e parcerias podem melhorar o abastecimento de água, o saneamento e as condições de saúde e produção.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="oportunidade-3">
+                  <span class="numero-ponto">03</span><span class="titulo-ponto">Linha de transporte coletivo</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="oportunidade-3" hidden><p>Uma linha regular entre o Faxinal e a cidade facilitaria o acesso dos moradores a serviços, estudo, trabalho e espaços de comercialização.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="oportunidade-4">
+                  <span class="numero-ponto">04</span><span class="titulo-ponto">Acesso a editais e projetos</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="oportunidade-4" hidden><p>Monitorar e divulgar editais permite que associações e comunidades concorram a recursos para infraestrutura, produção e ações culturais.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="oportunidade-5">
+                  <span class="numero-ponto">05</span><span class="titulo-ponto">Compras públicas — PNAE e PAA</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="oportunidade-5" hidden><p>Os programas de alimentação escolar e aquisição de alimentos podem garantir demanda para a produção de associações e agricultores familiares.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="oportunidade-6">
+                  <span class="numero-ponto">06</span><span class="titulo-ponto">Parcerias institucionais</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="oportunidade-6" hidden><p>Parcerias com instituições de ensino, órgãos públicos, cooperativas e entidades podem oferecer capacitação, apoio técnico e investimento.</p></div>
+              </div>
+
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="oportunidade-7">
+                  <span class="numero-ponto">07</span><span class="titulo-ponto">Equipamentos medicinais</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="oportunidade-7" hidden><p>A necessidade de equipamentos médicos que só tem na cidade nas comunidades rurais </p></div>
+              </div>
+
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="oportunidade-8">
+                  <span class="numero-ponto">08</span><span class="titulo-ponto">Hortas escolares</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="oportunidade-8" hidden><p>Criação de pequenas hortas nas escolas, a fim de promover uma alimentação menos ultraprocessados</p></div>
+              </div>
+
+            </div>
+          </article>
+
+
+
+
+
+
+
+
+
+
+          
+          <article class="quadrante quadrante-ameacas revelar" data-grupo="ameacas" aria-labelledby="ameaca-titulo">
+            <header class="cabecalho-quadrante">
+              <div class="icone-quadrante">
+                <svg aria-hidden="true" viewBox="0 0 48 48"><path d="M24 5 44 41H4L24 5Z"/><path d="M24 17v12m0 6v1"/></svg>
+              </div>
+              <div><p>Externo • desafiador</p><h3 id="ameaca-titulo">Ameaças</h3></div>
+              <span class="contador-pontos"><strong>6</strong> pontos</span>
+            </header>
+            <p class="descricao-quadrante">Riscos que podem enfraquecer a comunidade e seu ambiente.</p>
+            <div class="lista-pontos">
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="ameaca-1">
+                  <span class="numero-ponto">01</span><span class="titulo-ponto">Instabilidade climática e econômica</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="ameaca-1" hidden><p>Eventos como El Niño, secas, excesso de chuva e oscilações de preços podem reduzir a produção e comprometer a renda das famílias.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="ameaca-2">
+                  <span class="numero-ponto">02</span><span class="titulo-ponto">Enfraquecimento da cultura e do lazer</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="ameaca-2" hidden><p>A redução de espaços, atividades e encontros comunitários pode enfraquecer vínculos, tradições e a participação das novas gerações.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="ameaca-3">
+                  <span class="numero-ponto">03</span><span class="titulo-ponto">Avanço do desmatamento</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="ameaca-3" hidden><p>A perda de vegetação pode comprometer a biodiversidade, as nascentes, o equilíbrio do solo e a qualidade de vida no território.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="ameaca-4">
+                  <span class="numero-ponto">04</span><span class="titulo-ponto">Degradação do solo e da água</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="ameaca-4" hidden><p>Contaminação, erosão e manejo inadequado ameaçam os recursos naturais, a produção de alimentos e a saúde dos moradores.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="ameaca-5">
+                  <span class="numero-ponto">05</span><span class="titulo-ponto">Acesso insuficiente à saúde</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="ameaca-5" hidden><p>A distância e a oferta limitada de unidades e profissionais de saúde podem atrasar atendimentos e ações de prevenção.</p></div>
+              </div>
+              <div class="cartao-ponto">
+                <button type="button" aria-expanded="false" aria-controls="ameaca-6">
+                  <span class="numero-ponto">06</span><span class="titulo-ponto">Criminalidade e insegurança</span><span class="icone-expandir" aria-hidden="true"></span>
+                </button>
+                <div class="detalhe-ponto" id="ameaca-6" hidden><p>Ocorrências de violência e criminalidade geram insegurança, dificultam a convivência e podem afastar moradores e iniciativas locais.</p></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="encerramento secao-observada" id="encerramento" aria-labelledby="encerramento-titulo">
+      <div class="sol-encerramento" aria-hidden="true"></div>
+      <div class="paisagem-encerramento" aria-hidden="true">
+        <svg viewBox="0 0 1600 520" preserveAspectRatio="none">
+          <path d="M0 245c262-79 441-50 623 28 192 83 360 56 513-6 180-73 312-70 464-12v265H0Z" fill="#426f58"/>
+          <path d="M0 344c206-51 384-22 569 54 226 93 457 6 620-39 159-44 284-30 411 19v142H0Z" fill="#173d31"/>
+          <path d="M745 520c-31-58-15-103 74-137 49-19 71-40 67-73 36 41 24 76-43 105-61 27-64 62-47 105Z" fill="#c7a86c" opacity=".8"/>
+        </svg>
+      </div>
+      <div class="conteudo-encerramento revelar">
+        <p class="rotulo-secao clara"></p>
+        <h2 id="encerramento-titulo">Conhecer as forças e os desafios das comunidades rurais é o primeiro passo para <em>preservar sua história</em> e construir novos caminhos.</h2>
+        <a href="#abertura">Voltar ao topo<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg></a>
+      </div>
+      <footer>
+        <p>Análise FOFA — IFPR</p>
+        <p>Preservação • participação • futuro coletivo</p>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
